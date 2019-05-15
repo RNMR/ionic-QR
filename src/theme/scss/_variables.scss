@@ -1,0 +1,126 @@
+// @import '~@nexbie/scss/index';
+// /**
+//  * Shared across all platforms and apps
+//  * You may define a set of global variables accessible across entire workspace here
+//  */
+
+$global-unit: 'px';
+
+/* color base
+---------------------------------------------------------------*/
+$color-branding: (
+  primary: #00a94f,
+  secondary: #f0a541,
+  complementary: #00add0,
+  primarylight: #69be28
+);
+$color-branding-complementary: (
+  first: #55aced,
+  second: #ff9100,
+  third: #2f4a9f
+);
+$color-semantic: (
+  error: #ff5c5c,
+  warning: #ffec5b,
+  success: green,
+  info: #87ccff
+);
+$color-neutral: (
+  white: #fff,
+  black: #333,
+  grayDark: #9c9c9c,
+  grayNeutral: #e5e5e5,
+  grayLight: #f0f0f0,
+  alabaster: #fafafa,
+  dirtyPurple: #4a494a
+);
+$color-disabled: (
+  gray: #c2c2c2
+);
+// example to use map_get($color-branding, primary)
+/* color elements
+--------------------------------------------------------------- */
+$color-text: map_get($color-neutral, black);
+$color-link: map_get($color-branding, primary);
+/* box
+--------------------------------------------------------------- */
+$box-padding: 20px;
+$box-margin: 20px;
+/* border
+--------------------------------------------------------------- */
+$border-color: map_get($color-neutral, grayNeutral);
+/* layout
+--------------------------------------------------------------- */
+$layout-width: 1024;
+/* breakpoints
+--------------------------------------------------------------- */
+$breakpoints: (
+  'desktop': 1048px,
+  'tablet': 800px,
+  'mobile': 601px,
+  'mobile-small': 400px,
+  'mobile-tiny': 320px
+);
+// Grid breakpoints
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+// Grid containers
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+// Fonts
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: 'Omnes';
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+// Custom Fonts
+$font-size-base-pixel: 16px;
+$font-primary: $font-family-sans-serif;
+$font-secondary: $font-family-sans-serif;
+$font-heading: $font-family-sans-serif;
+$font-text: $font-family-sans-serif;
+$font-global: $font-primary;
+// Body
+// Settings for the `<body>` element.
+$body-bg: #fafafa;
+$body-color: #333;
+// Links
+// Style anchor elements.
+$link-color: inherit;
+$link-decoration: none;
+$link-hover-color: auto;
+$link-hover-decoration: none;
+
+$font-weight-lighter: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 500 !default;
+$font-weight-bolder: 600 !default;
+$font-weight-black: 700 !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$font-weights: () !default;
+$font-weights: map-merge(
+  (
+    100: 100,
+    200: $font-weight-lighter,
+    300: $font-weight-light,
+    400: $font-weight-normal,
+    500: $font-weight-bold,
+    600: $font-weight-bolder,
+    700: $font-weight-black
+  ),
+  $font-weights
+);

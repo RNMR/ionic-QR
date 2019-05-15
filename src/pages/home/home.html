@@ -7,11 +7,13 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
+  <ion-item class="px-2 my-4">
     <ion-input type="text" placeholder="Data QR" [(ngModel)]="qrData"></ion-input>
   </ion-item>
-  <button ion-button full icon-left (click)="createCode()"> <ion-icon name="barcode"></ion-icon> Crear Código</button>
-  <button ion-button full icon-left (click)="scanCode()"> <ion-icon name="qr-scanner"></ion-icon> Escanear Código</button>
+  <div class="pt-2">
+    <button class="my-4" ion-button full icon-left (click)="createCode()"> <ion-icon name="barcode"></ion-icon> Crear Código</button>
+    <button class="my-4" ion-button full icon-left (click)="scanCode()"> <ion-icon name="qr-scanner"></ion-icon> Escanear Código</button>
+  </div>
 
   <ion-card *ngIf="createdCode">
     <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>

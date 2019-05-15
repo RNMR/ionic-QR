@@ -1,0 +1,93 @@
+
+<ion-content scroll="false" no-bounce> <!-- 'no-bounce' works too? -->
+  <div class="loginHolder px-3">
+    <ion-card class="mx-4">
+      <ion-grid class="logForm">
+        <form action="" [formGroup]="loginForm" (ngSubmit)="logForm()">
+          
+          <ion-row align-items-center class=" py-2">
+            <ion-item class="px-4">
+                <ion-label  floating> Usuario:</ion-label>
+                <ion-input formControlName="user" type="email" class=" logForm--input"></ion-input>
+            </ion-item>
+            <!-- <ion-label color="danger" *ngIf="true">
+              Usuario es inválido {{loginForm.user  }}
+              <pre>
+                
+              </pre>
+            </ion-label> -->
+          </ion-row>
+
+          <ion-row align-items-center class=" py-2">
+            <ion-item class="px-4">
+                <ion-label  floating> Password: </ion-label> 
+                <ion-input formControlName="password" type="password" class=" logForm--input"></ion-input>
+            </ion-item>
+          </ion-row>
+  
+          <ion-row justify-content-center	size-lg class="py-4"> <button ion-button type="submit" [disabled]="!loginForm.valid">Enviar</button> </ion-row>
+        </form>
+      </ion-grid>
+    </ion-card>
+  </div>
+  <!-- <ion-grid>
+      "align-items-start"
+    <ion-row align-items-start>
+      <ion-col>
+        [start] ion-col
+      </ion-col>
+      <ion-col>
+        [start] ion-col
+      </ion-col>
+      <ion-col align-self-end>
+        [start] ion-col [end]
+      </ion-col>
+      <ion-col>
+        ion-col
+        <br>#
+        <br>#
+      </ion-col>
+    </ion-row>
+    now da "align-items-center"
+    <ion-row align-items-center>
+      <ion-col>
+        [center] ion-col
+      </ion-col>
+      <ion-col>
+        [center] ion-col
+      </ion-col>
+      <ion-col>
+        [center] ion-col
+      </ion-col>
+      <ion-col>
+        ion-col
+        <br>#
+        <br>#
+      </ion-col>
+    </ion-row>
+    nothing, 12 size-sm
+    <ion-row>
+      <ion-col size="12" size-sm>
+        ion-col [size="12"] [size-sm]
+      </ion-col>
+      <ion-col size="12" size-sm>
+        ion-col [size="12"] [size-sm]
+      </ion-col>
+      <ion-col size="12" size-sm>
+        ion-col [size="12"] [size-sm]
+      </ion-col>
+      <ion-col size="12" size-sm>
+        ion-col [size="12"] [size-sm]
+      </ion-col>
+    </ion-row>
+    size 6 size-lg
+    <ion-row>
+      <ion-col size="6" size-lg offset="3">
+        ion-col [size="6"] [size-lg] [offset="3"]
+      </ion-col>
+      <ion-col size="3" size-lg>
+        ion-col [size="3"] [size-lg]
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-content>

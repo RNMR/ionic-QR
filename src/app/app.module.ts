@@ -9,25 +9,34 @@ import { HomePage } from '../pages/home/home';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { FormsModule } from '@angular/forms';
+import { AuthPage } from '../pages/auth/auth';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    AuthPage,
   ],
   imports: [
     BrowserModule,
     // FormsModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, 
+      {
+        scrollAssist: false, autoFocusAssist: false
+      }
+    ),
     NgxQRCodeModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    AuthPage
   ],
   providers: [
     StatusBar,
+    AndroidPermissions,
     SplashScreen,
     BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

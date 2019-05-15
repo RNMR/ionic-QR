@@ -1,0 +1,20 @@
+.loginHolder{
+  position: relative;
+  display: flex;
+  height: 100vh; //32px because padding is 16px
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #00ffff;
+  background-image: repeating-linear-gradient(120deg, #fff 17%, #fff 17%, #5fffff 18%, #5fffff 50%);
+
+  .logForm{
+    justify-content: center;
+    flex-direction: column;
+
+    // &--input{
+    //   border-left: 3px solid #4f2a87;
+    // }
+  }
+
+}

@@ -1,0 +1,6 @@
+@import 'variables';
+
+@function calculateRem($size: 1.6) {
+  $remSize: $size / $font-size-base-pixel;
+  @return #{$remSize}rem;
+}

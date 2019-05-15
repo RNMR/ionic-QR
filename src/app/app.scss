@@ -1,6 +1,18 @@
 // http://ionicframework.com/docs/theming/
 
+@import "../theme/scss/index";
 
+ion-row{
+  margin: 0 !important;
+}
+
+ion-item{
+  padding-left: 0 !important;
+}
+
+ion-input {
+  font-size: 15px;
+}
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
